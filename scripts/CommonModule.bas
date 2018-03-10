@@ -1,6 +1,18 @@
 Attribute VB_Name = "CommonModule"
 Option Explicit
 
+'##############################################################################
+'# Reads a text file to string
+'# @see CommonModule.Trim_Improved(String)
+'##############################################################################
+Public Function ReadTextFile(filePath As String) As String
+    Dim iFile As Integer
+    On Local Error Resume Next
+    iFile = FreeFile
+    Open filePath For Input As #iFile
+    ReadTextFile = Input$(LOF(iFile), iFile)
+    Close #iFile
+End Function
 
 '##############################################################################
 '# a better trim that also removes linebreaks
@@ -8,7 +20,7 @@ Option Explicit
 '# @return the trimmed string
 '# @see: https://stackoverflow.com/questions/24048400/function-to-trim-leading-and-trailing-whitespace-in-vba
 '##############################################################################
-Function Trim_Improved(str As String)
+Function Trim_Improved(str As String) As String
     Dim RE As Object, ResultString As String
     Set RE = CreateObject("vbscript.regexp")
     RE.MultiLine = True

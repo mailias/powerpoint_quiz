@@ -1,0 +1,213 @@
+####
+Q__1-100
+--- 
+Die erste Frage? 
+---
+A) Eine Option
+B) Eine weitere Option
+C) Und noch was
+--- 
+Richtig ist A) Eine Option
+
+####
+Q__1-80
+--- 
+Die zweite Frage? 
+---
+Kleiner Tipp…
+--- 
+Das ist die zweite Antwort!
+
+####
+Q__1-60
+--- 
+Eine Aktionsaufgabe
+---
+--- 
+
+####
+Q__1-40
+--- 
+JOKER
+---
+--- 
+
+####
+Q__1-20
+--- 
+JOKER
+---
+--- 
+
+####
+Q__1-10
+--- 
+JOKER
+---
+--- 
+
+####
+Q__2-100 
+--- 
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam?
+---
+Tipp: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era.
+--- 
+Lorem ipsum dolor! Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era.
+
+####
+Q__2-80
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__2-60
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__2-40
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__2-20
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__2-10
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__3-100 
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__3-80
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__3-60
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__3-40
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__3-20
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__3-10
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__4-100 
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__4-80
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__4-60
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__4-40
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__4-20
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+####
+Q__4-10
+--- 
+<hier Frage>
+---
+<hier Optionen oder Hinweis>
+--- 
+<hier Antwort>
+
+
+
+

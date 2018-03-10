@@ -7,6 +7,7 @@ Option Explicit
 '##############################################################################
 
 Public Const ERROR_INVALID_DATA As Long = vbObjectError + 422
+Public Const QUESTIONS_FILE As String = "questions.txt"
 
 
 '##############################################################################
@@ -58,13 +59,13 @@ Sub Start()
     ' -------------------------------
     ' read questions to dictionary
     ' -------------------------------
-    Dim strNotesPageText As String
+    Dim strQuestions As String: strQuestions = ReadQuestions()
+        
     Dim strRec As Variant
     Set dictQ = New Scripting.Dictionary
-    strNotesPageText = Trim(CommonModule.Get_Slide("Board") _
-                            .NotesPage.Shapes.Placeholders(2).TextFrame.TextRange.Text)
+    
     ' split notes area text in order to get an array containing each question data
-    For Each strRec In Split(strNotesPageText, "####")
+    For Each strRec In Split(strQuestions, "####")
         If strRec <> "" Then
             
             ' Debug.Print strRec
@@ -86,8 +87,8 @@ Sub Start()
             Dim objQRec As QuestionRecord: Set objQRec = New QuestionRecord
             objQRec.Id = strId
             objQRec.Question = Trim_Improved(arrTmp(1))
-            objQRec.Notes = Trim_Improved(arrTmp(2))
-            objQRec.Solution = Trim_Improved(arrTmp(3))
+            objQRec.Notes = Trim(arrTmp(2))
+            objQRec.Solution = Trim(arrTmp(3))
             objQRec.Points = Split(strId, "-")(1)
             dictQ.Add strId, objQRec
             
@@ -98,6 +99,22 @@ Sub Start()
     
 End Sub
 
+'##############################################################################
+'# Reads the questions
+'##############################################################################
+Function ReadQuestions() As String
+
+    Dim strFilePath As String: strFilePath = ActivePresentation.Path + "\" + QUESTIONS_FILE
+    If Len(Dir$(strFilePath)) = 0 Then
+        MsgBox strFilePath & " file not found."
+        Exit Function
+    End If
+    ReadQuestions = CommonModule.ReadTextFile(strFilePath)
+    
+    'the old version below read from notes area instead of external file:
+    'ReadQuestions = Trim(CommonModule.Get_Slide("Board").NotesPage.Shapes.Placeholders(2).TextFrame.TextRange.Text)
+
+End Function
 
 '##############################################################################
 '# a better trim that also removes linebreaks
@@ -121,9 +138,11 @@ Sub Click_Question_Button(oShp As shape)
     oShp.Visible = msoFalse
     
     ' set the question text and note/options on the question slide
-    With CommonModule.Get_Slide("QuestionSlide")
-        .Shapes("Question").TextFrame.TextRange.Text = dictQ(oShp.Name).Question
-        .Shapes("QuestionNote").TextFrame.TextRange.Text = dictQ(oShp.Name).Notes
+    With CommonModule.Get_Slide("QuestionSlide").Shapes("Question")
+        .TextFrame2.TextRange.Text = dictQ(oShp.Name).Question
+    End With
+    With CommonModule.Get_Slide("QuestionSlide").Shapes("QuestionNote")
+        .TextFrame2.TextRange.Text = dictQ(oShp.Name).Notes
     End With
 
     ' go to the question slide
